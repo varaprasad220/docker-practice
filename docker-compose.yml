@@ -1,0 +1,29 @@
+version: '3'
+services:
+  movies:
+    image: varaprasad220/moviesservice:latest
+    ports:
+      - "81:80"
+    deploy:
+      replicas: 3
+
+  train:
+    image: varaprasad220/trainservice:latest
+    ports:
+      - "82:80"
+    deploy:
+      replicas: 3
+
+  recharge:
+    image: varaprasad220/rechargeservice:latest
+    ports:
+      - "83:80"
+    deploy:
+      replicas: 3
+
+  dth:
+    image: varaprasad220/dthservice:latest
+    ports:
+      - "84:80"
+    deploy:
+      replicas: 3
